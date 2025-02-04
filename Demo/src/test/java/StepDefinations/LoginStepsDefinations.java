@@ -3,6 +3,7 @@ package StepDefinations;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import Pages.loginPage;
 import io.cucumber.java.en.And;
@@ -19,13 +20,21 @@ public class LoginStepsDefinations {
 	public void user_is_on_login_page() {
 	    // Write code here that turns the phrase above into concrete actions
 	    
-		driver = new EdgeDriver();
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
-		driver.get("https://www.saucedemo.com/v1/");
-		
+		try {
+			driver = new EdgeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			
+			driver.get("https://www.saucedemo.com/v1/");
+		} catch (Exception e) {
+			driver = new FirefoxDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			
+			driver.get("https://www.saucedemo.com/v1/");
+		}		
 	}
 
 	@When("user enters valid {string} and {string}.")
