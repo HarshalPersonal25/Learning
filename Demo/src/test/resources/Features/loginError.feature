@@ -1,6 +1,6 @@
 Feature: Automating login page for Sauce Demo - Error Scenario.
 
-  @regression
+  @progression @smoke
   Scenario Outline: Login is successful with Locked credentials.
     Given user is on login page.
     When user enters valid "<username>" and "<password>".

@@ -1,47 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-06T14:09:18 IST" name="Default suite" finished-at="2025-02-06T14:09:28 IST" duration-ms="9603">
+  <suite started-at="2025-02-03T21:50:44 IST" name="Default suite" finished-at="2025-02-03T21:51:13 IST" duration-ms="29386">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunnerLogin@687e99d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-06T14:09:18 IST" name="Default test" finished-at="2025-02-06T14:09:28 IST" duration-ms="9603">
-      <class name="TestRunner.TestRunnerLogin">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.TestRunnerLogin@687e99d8]" started-at="2025-02-06T14:09:18 IST" name="setUpClass" finished-at="2025-02-06T14:09:19 IST" duration-ms="617" status="PASS">
+    <test started-at="2025-02-03T21:50:44 IST" name="Default test" finished-at="2025-02-03T21:51:13 IST" duration-ms="29386">
+      <class name="TestRunner.TestLoginRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:50:44 IST" name="setUpClass" finished-at="2025-02-03T21:50:45 IST" duration-ms="816" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@27a97e08]]>
+                <![CDATA[org.testng.TestRunner@4beaf6bd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunnerLogin@687e99d8]" started-at="2025-02-06T14:09:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T14:09:28 IST" duration-ms="8903" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:50:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-03T21:50:51 IST" duration-ms="6657" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Open Menu from home page."]]>
+                <![CDATA["Login is successful with Standard credentials."]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Open Menu and click on All Items"]]>
+                <![CDATA["Automating login page for Sauce Demo."]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunnerLogin@687e99d8]" started-at="2025-02-06T14:09:28 IST" name="tearDownClass" finished-at="2025-02-06T14:09:28 IST" duration-ms="31" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:50:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-03T21:50:57 IST" duration-ms="5851" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login is successful with Problem credentials."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Automating login page for Sauce Demo."]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:50:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-03T21:51:08 IST" duration-ms="10725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login is successful with Performance credentials."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Automating login page for Sauce Demo."]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:51:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-03T21:51:13 IST" duration-ms="5233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login is successful with Locked credentials."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Automating login page for Sauce Demo - Error Scenario."]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.TestLoginRunner@687e99d8]" started-at="2025-02-03T21:51:13 IST" name="tearDownClass" finished-at="2025-02-03T21:51:13 IST" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunner.TestRunnerLogin -->
+      </class> <!-- TestRunner.TestLoginRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

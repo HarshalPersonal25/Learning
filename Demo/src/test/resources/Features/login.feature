@@ -14,7 +14,7 @@ Feature: Automating login page for Sauce Demo.
       | username      | password     |
       | standard_user | secret_sauce |
 
-  @regression
+  @regression @smoke
   Scenario Outline: Login is successful with Problem credentials.
     When user enters valid "<username>" and "<password>".
     And user clicks on login button.
@@ -25,7 +25,7 @@ Feature: Automating login page for Sauce Demo.
       | username     | password     |
       | problem_user | secret_sauce |
 
-  @regression
+  @sanity @progression
   Scenario Outline: Login is successful with Performance credentials.
     When user enters valid "<username>" and "<password>".
     And user clicks on login button.
