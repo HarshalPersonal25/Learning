@@ -3,7 +3,9 @@ package StepDefinations;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import Pages.loginPage;
 import io.cucumber.java.en.And;
@@ -21,6 +23,8 @@ public class LoginStepsDefinations {
 	    // Write code here that turns the phrase above into concrete actions
 	    
 		try {
+			EdgeOptions options = new EdgeOptions();
+			options.setCapability("webSocketUrl", true);
 			driver = new EdgeDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
@@ -28,7 +32,9 @@ public class LoginStepsDefinations {
 			
 			driver.get("https://www.saucedemo.com/v1/");
 		} catch (Exception e) {
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setCapability("webSocketUrl", true);
+			driver = new FirefoxDriver(options);
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
