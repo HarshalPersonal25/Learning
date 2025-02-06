@@ -5,20 +5,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import Pages.loginPage;
+import Pages.menuPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginStepsDefinations {
+public class StepDefinations {
 
 	static WebDriver driver;
 	loginPage login;
+	menuPage menu;
 	
 	@Given("user is on login page.")
 	public void user_is_on_login_page() {
-	    // Write code here that turns the phrase above into concrete actions
 	    
 		try {
 			driver = new EdgeDriver();
@@ -82,5 +85,26 @@ public class LoginStepsDefinations {
 	    // Write code here that turns the phrase above into concrete actions
 	    
 		driver.quit();
+	}
+	
+	@When("user clicks on Menu button.")
+	public void user_clicks_on_menu_button() {
+	    menu = new menuPage(driver);
+		menu.clickOnMenuButton();
+	}
+
+	@Then("All Menu slidebar appears.")
+	public void all_menu_slidebar_appears() {
+	    Assert.assertEquals(menu.verifyMenuIsOpen(),"All Items");
+	}
+
+	@When("user clicks on all items option on Menu sidebar.")
+	public void user_clicks_on_all_items_option() {
+	    menu.clickOnAllItemsOption();
+	}
+
+	@Then("user lands on inventory page.")
+	public void user_lands_on_inventory_page() {
+	   Assert.assertEquals("https://www.saucedemo.com/v1/inventory.html", menu.getUrlOfInventoryPage());
 	}
 }

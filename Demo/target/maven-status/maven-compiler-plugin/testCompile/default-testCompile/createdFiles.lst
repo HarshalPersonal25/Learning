@@ -1,3 +1,4 @@
-StepDefinations\LoginStepsDefinations.class
-TestRunner\TestRunnerLogin.class
 Pages\loginPage.class
+Pages\menuPage.class
+StepDefinations\StepDefinations.class
+TestRunner\TestRunnerLogin.class
